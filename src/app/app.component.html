@@ -1,0 +1,24 @@
+<div class="stopwatch container-fluid">
+  <div class="stopwatch-display">
+    {{ displayTimer }}
+  </div>
+  <div class="stopwatch-buttons">
+    <button class="btn btn-outline-primary" (click)="toggleTimer()">
+      {{ startText }}
+    </button>
+    <button
+      class="btn btn-outline-secondary"
+      [disabled]="!isRunning"
+      (dblclick)="pauseTimer()"
+    >
+      Wait
+    </button>
+    <button
+      class="btn btn-outline-danger"
+      [disabled]="!isRunning"
+      (click)="resetTimer()"
+    >
+      Reset
+    </button>
+  </div>
+</div>
